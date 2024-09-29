@@ -11,7 +11,7 @@ import nltk
 
 nltk.download('stopwords')
 
-news_df = pd.read_csv(r'C:\Users\Hp\Downloads\train.csv.zip')
+news_df = pd.read_csv('train.csv.zip')
 news_df = news_df.fillna(' ')
 news_df['content'] = news_df['author'] + ' ' + news_df['title']
 X = news_df.drop('label', axis=1)
